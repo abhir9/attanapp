@@ -1,0 +1,6 @@
+{
+  "dbHost": "mongodb://localhost:27017",
+  "apiUrl": "http://127.0.0.1/",
+  "serverPort":5040,
+  "secretKey": "As@09#$%_q1"
+}

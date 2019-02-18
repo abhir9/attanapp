@@ -1,0 +1,22 @@
+.welcome-card ion-img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+.middle-bottom {
+  bottom: 65px;
+  left: 25px;
+  position: fixed;
+  right: 25px;
+}
+.high-length {
+  min-height: 75%;
+}
+.top-space{
+  margin-top: 10px;
+}
+ion-avatar{
+  height: 100%;
+  width: 100%;
+  max-width: 100px;
+  max-height: 100px;
+}
