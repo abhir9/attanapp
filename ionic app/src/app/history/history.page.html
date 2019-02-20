@@ -1,9 +1,38 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header text-center>
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab Two
+      History
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-header>
 
-<ion-content></ion-content>
+
+<ion-content padding text-center>
+  <div>
+    <ion-card >
+        <ion-grid>
+        <ion-row>
+          <ion-col>Date</ion-col>
+          <ion-col>Login</ion-col>
+          <ion-col>Logout</ion-col>
+        </ion-row>
+        </ion-grid>
+    </ion-card>
+  </div>
+  <div *ngIf="historydata">
+          <div *ngFor="let year of historydata | keyvalue">
+            <div *ngFor="let month of historydata[year.key] | keyvalue">
+                <ion-card  *ngFor="let date of historydata[year.key][month.key] | keyvalue">
+                          <ion-grid>
+                        <ion-row>
+                          <ion-col>{{date.key}}</ion-col>
+                          <ion-col>{{historydata[year.key][month.key][date.key].login}}</ion-col>
+                          <ion-col>{{historydata[year.key][month.key][date.key].logout}}</ion-col>
+                        </ion-row>
+                      </ion-grid>
+                </ion-card>
+            </div>
+          </div>
+  </div>
+</ion-content>

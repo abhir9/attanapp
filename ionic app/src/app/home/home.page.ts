@@ -62,7 +62,7 @@ export class HomePage {
       return this.replaceInfo(loginData); } , (err) => {
 
   //  for browser
-      return this.apiService.post('http://172.20.10.2:3000/check/', {'organisationId': 'logindb111', 'profile': {}, 'device': {'id':'asdfasd'}});
+      return this.apiService.post('http://localhost:3000/check/', {'organisationId': 'logindb111', 'profile': {}, 'device': {'id':'asdfasd'}});
     }).then((loginData: any)  => {
 
       if(loginData.time)

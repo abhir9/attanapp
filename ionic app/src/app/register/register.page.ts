@@ -24,7 +24,7 @@ export class RegisterPage {
           return this.storage.get('device').then(deviceInfo => {
             this.storage.set('profileInfo', this.register.value);
             // return this.apiService.post(scanArray[1], {'organisationId': scanArray[0], 'profile': this.register.value, 'device': deviceInfo}
-            return this.apiService.post('http://172.20.10.2:3000/make/', {'organisationId': 'logindb111', 'profile': {name:"demo",designation:"demo1"}, 'device': {'id':'asdfasd'}}
+            return this.apiService.post('http://localhost:3000/make/', {'organisationId': 'logindb111', 'profile': {name:"demo",designation:"demo1"}, 'device': {'id':'asdfasd'}}
 
 
             );
